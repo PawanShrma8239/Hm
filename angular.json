@@ -39,7 +39,22 @@
               "src/assets/css/responsive.css",
               "src/assets/css/style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/ajaxchimp.min.js",
+              "src/assets/js/jquery.min.js",
+              "src/assets/js/bootstrap.bundle.min.js",
+              "src/assets/js/aos.js",
+              "src/assets/js/appear.min.js",
+              "src/assets/js/carousel-thumbs.min.js",
+              "src/assets/js/contact-form-script.js",
+              "src/assets/js/custom.js",
+              "src/assets/js/form-validator.min.js",
+              "src/assets/js/jquery.magnific-popup.js",
+              "src/assets/js/jquery.meanmenu.js",
+              "src/assets/js/jquery.min.js",
+              "src/assets/js/odometer.min.js",
+              "src/assets/js/owl.carousel.min.js",
+            ]
           },
           "configurations": {
             "production": {
