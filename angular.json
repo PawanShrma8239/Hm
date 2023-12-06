@@ -25,7 +25,6 @@
               "src/assets"
             ],
             "styles": [
-              
               "src/styles.css",
               "src/assets/css/aos.css",
               "src/assets/css/bootstrap.min.css",
@@ -39,6 +38,7 @@
               "src/assets/css/remixicon.css",
               "src/assets/css/responsive.css",
               "src/assets/css/style.css"
+              
             ],
             "scripts": [
               "src/assets/js/ajaxchimp.min.js",
@@ -52,6 +52,7 @@
               "src/assets/js/form-validator.min.js",
               "src/assets/js/jquery.magnific-popup.js",
               "src/assets/js/jquery.meanmenu.js",
+              "src/assets/js/jquery.min.js",
               "src/assets/js/odometer.min.js",
               "src/assets/js/owl.carousel.min.js"
             ]
