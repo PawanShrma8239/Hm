@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { GamesComponent } from './games/games.component';
 import { MainComponent } from './main/main.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -21,6 +22,7 @@ import { MainComponent } from './main/main.component';
     GalleryComponent,
     GamesComponent,
     MainComponent,
+    LoginComponent,
    
   ],
   imports: [
