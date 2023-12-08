@@ -21,6 +21,11 @@ export class HeaderComponent implements OnInit {
         this.scrollTo(fragment);
       }
     });
+    
+  }
+  navigateToLogin() {
+    // Use the router to navigate to the login route
+    this.router.navigate(['/login']);
   }
 
   scrollTo(elementId: string): void {
