@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { LoginComponent } from './login/login.component';
     GamesComponent,
     MainComponent,
     LoginComponent,
+  
    
   ],
   imports: [
