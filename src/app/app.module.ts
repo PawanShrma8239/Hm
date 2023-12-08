@@ -10,6 +10,8 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { GamesComponent } from './games/games.component';
 import { MainComponent } from './main/main.component';
 import { LoginComponent } from './login/login.component';
+import { ContactComponent } from './contact/contact.component';
+
 
 
 
@@ -23,6 +25,8 @@ import { LoginComponent } from './login/login.component';
     GamesComponent,
     MainComponent,
     LoginComponent,
+    ContactComponent,
+  
    
   ],
   imports: [
