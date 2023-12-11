@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FeatureComponent } from './feature.component';
 import { XComponent } from './x/x.component';
-import { PayComponent } from './pay/pay.component';
+
 
 
 const routes: Routes = [
@@ -10,7 +10,7 @@ const routes: Routes = [
  {path:'feature', component:FeatureComponent,children:[
   {path:'',redirectTo:'x' ,pathMatch: 'full'},
    {path:'x',component:XComponent},
-   {path:'pay',component:PayComponent},
+
 
    
  ]},

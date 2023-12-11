@@ -22,9 +22,10 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/fonts"
             ],
-            "styles": [ "node_modules/font-awesome/css/font-awesome.min.css",
+            "styles": [ 
               "src/styles.css",
               "src/assets/css/animate.min.css",
               "src/assets/css/all.min.css",
@@ -41,7 +42,7 @@
               "src/assets/css/index-style.web.css",
               "src/assets/css/jquery.dataTables.min.css",
               "src/assets/css/magnific-popup.web.css",
-             
+           "src/assets/fonts/flaticon.css",
               "src/assets/css/main.css",
               "src/assets/css/meanmenu.web.css",
               "src/assets/css/normalize.css",

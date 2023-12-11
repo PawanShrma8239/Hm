@@ -1,0 +1,9 @@
+/* Add or adjust your CSS as needed */
+.nav.sub-group-menu {
+    display: none; /* Initially hide the submenu */
+  }
+  
+  .nav.sub-group-menu.show {
+    display: block; /* Show the submenu when 'show' class is present */
+  }
+  
