@@ -5255,10 +5255,12 @@ border: none;
 }
 
 h2 {
-font-family: OpenSans-Bold;
-font-size: 11px;
-color: #616E75;
-text-align: left;  
+font-family:"source serif pro", serif;
+font-size: 24px;
+color: #111d5e;
+text-align: center;  
+font-weight: 700;
+margin-bottom: 10px;
 padding-left: 10px;
 }
 
