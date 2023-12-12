@@ -1,9 +1,9 @@
-/* Add or adjust your CSS as needed */
-.nav.sub-group-menu {
-    display: none; /* Initially hide the submenu */
+
+.active {
+    /* Your active styles here */
   }
   
-  .nav.sub-group-menu.show {
-    display: block; /* Show the submenu when 'show' class is present */
+  .menu-open {
+    display: block !important; /* Important to override the style attribute */
   }
   

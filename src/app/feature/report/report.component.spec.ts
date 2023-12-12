@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { XComponent } from './x.component';
+import { ReportComponent } from './report.component';
 
-describe('XComponent', () => {
-  let component: XComponent;
-  let fixture: ComponentFixture<XComponent>;
+describe('ReportComponent', () => {
+  let component: ReportComponent;
+  let fixture: ComponentFixture<ReportComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [XComponent]
+      declarations: [ReportComponent]
     });
-    fixture = TestBed.createComponent(XComponent);
+    fixture = TestBed.createComponent(ReportComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
