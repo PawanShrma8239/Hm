@@ -6,9 +6,9 @@ import { Component  } from '@angular/core';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
-  showSubMenu: boolean = false;
+  activeMenuItem: string = '';
 
-  toggleSubMenu(): void {
-    this.showSubMenu = !this.showSubMenu;
+  toggleSubMenu(menuItem: string): void {
+    this.activeMenuItem = this.activeMenuItem === menuItem ? '' : menuItem;
   }
 }
