@@ -7,7 +7,7 @@ import { FeatureRoutingModule } from './feature-routing.module';
 import { FheaderComponent } from './fheader/fheader.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
-import { XComponent } from './x/x.component';
+
 
 
 
@@ -16,7 +16,7 @@ import { XComponent } from './x/x.component';
     FeatureComponent,
     FheaderComponent,
     SidebarComponent,
-    XComponent,
+
    
   ],
   imports: [
