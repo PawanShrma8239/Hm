@@ -22,7 +22,7 @@ import { VisitHistoryComponent } from './visit-history/visit-history.component';
 import { TransactionsComponent } from './transactions/transactions.component';
 import { PayComponent } from './pay/pay.component';
 import { ComplaintComponent } from './complaint/complaint.component';
-import { ReportComponent } from './report/report.component';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FfooterComponent } from './ffooter/ffooter.component';
 
@@ -48,7 +48,7 @@ import { FfooterComponent } from './ffooter/ffooter.component';
     TransactionsComponent,
     PayComponent,
     ComplaintComponent,
-    ReportComponent,
+    
     DashboardComponent,
     FfooterComponent,
    
