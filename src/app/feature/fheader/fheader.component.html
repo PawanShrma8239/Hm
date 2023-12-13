@@ -37,8 +37,8 @@
             </li>
         </ul>
         <ul class="navbar-nav">
-            <li class="navbar-item dropdown header-admin">
-                <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            <li class="navbar-item dropdown header-admin" >
+                <a class="navbar-nav-link dropdown-toggle" role="button" (click)="togglePDropdown()" [attr.aria-expanded]="isPDropdownOpen.toString()">
                     <div class="admin-title">
                         <h5 class="item-title">Vikram</h5>
                         <span>Admin</span>
@@ -47,7 +47,7 @@
                         <img src="assets/img/figure/admin.jpg" alt="Admin">
                     </div>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right">
+                <div class="dropdown-menu dropdown-menu-right" [ngClass]="{'show': isPDropdownOpen}">
                     <div class="item-header">
                         <h6 class="item-title">Vikram</h6>
                     </div>
@@ -60,13 +60,13 @@
                 </div>
             </li>
             <li class="navbar-item dropdown header-message">
-                <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                <a class="navbar-nav-link dropdown-toggle"  role="button" (click)="toggleMDropdown()" [attr.aria-expanded]="isMDropdownOpen.toString()">
                     <i class="far fa-envelope"></i>
                     <div class="item-title d-md-none text-16 mg-l-10">Message</div>
                     <span>5</span>
                 </a>
 
-                <div class="dropdown-menu dropdown-menu-right">
+                <div class="dropdown-menu dropdown-menu-right" [ngClass]="{'show': isMDropdownOpen}">
                     <div class="item-header">
                         <h6 class="item-title">05 Message</h6>
                     </div>
@@ -135,13 +135,13 @@
                 </div>
             </li>
             <li class="navbar-item dropdown header-notification">
-                <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                <a class="navbar-nav-link dropdown-toggle" role="button" (click)="toggleNDropdown()" [attr.aria-expanded]="isNDropdownOpen.toString()">
                     <i class="far fa-bell"></i>
                     <div class="item-title d-md-none text-16 mg-l-10">Notification</div>
                     <span>8</span>
                 </a>
 
-                <div class="dropdown-menu dropdown-menu-right">
+                <div class="dropdown-menu dropdown-menu-right"  [ngClass]="{'show': isNDropdownOpen}">
                     <div class="item-header">
                         <h6 class="item-title">03 Notifiacations</h6>
                     </div>
@@ -177,8 +177,8 @@
                 </div>
             </li>
             <li class="navbar-item dropdown header-language">
-                <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-globe-americas"></i>EN</a>
-                <div class="dropdown-menu dropdown-menu-right">
+                <a class="navbar-nav-link dropdown-toggle"  role="button" data-toggle="dropdown" (click)="toggleLDropdown()" [attr.aria-expanded]="isLDropdownOpen.toString()"><i class="fas fa-globe-americas"></i>EN</a>
+                <div class="dropdown-menu dropdown-menu-right"  [ngClass]="{'show': isLDropdownOpen}">
                     <a class="dropdown-item" href="#">English</a>
                     <a class="dropdown-item" href="#">Spanish</a>
                     <a class="dropdown-item" href="#">Franchis</a>
