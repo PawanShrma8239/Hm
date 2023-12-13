@@ -11,6 +11,7 @@ import { MainComponent } from './main/main.component';
 import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
 import { FeatureModule } from './feature/feature.module';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 
 
@@ -32,6 +33,7 @@ import { FeatureModule } from './feature/feature.module';
     MainComponent,
     LoginComponent,
     ContactComponent,
+    ForgotPasswordComponent,
     
    
    
