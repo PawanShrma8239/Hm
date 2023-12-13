@@ -10,7 +10,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 
 import { GuestRegistrationComponent } from './guest-registration/guest-registration.component';
 import { ManageGuestComponent } from './manage-guest/manage-guest.component';
-import { AddARoomComponent } from './add-aroom/add-aroom.component';
+import { AddARoomComponent } from './add-a-room/add-a-room.component';
 import { ManageRoomsComponent } from './manage-rooms/manage-rooms.component';
 import { MyAccountComponent } from './my-account/my-account.component';
 import { AddressBookComponent } from './address-book/address-book.component';
