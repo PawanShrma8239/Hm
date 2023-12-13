@@ -8,11 +8,13 @@ import { FeatureComponent } from './feature/feature.component';
 
 
 
+
 const routes: Routes = [
  { path: '', redirectTo: 'feature', pathMatch: 'full' }, // Redirect empty path to '/home'
 { path: 'main', component: MainComponent },
 {path:'login', component:LoginComponent},
 {path:'feature', component:FeatureComponent},
+
 
 
 

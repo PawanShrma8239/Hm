@@ -1,0 +1,9 @@
+
+.active {
+    /* Your active styles here */
+  }
+  
+  .menu-open {
+    display: block !important; /* Important to override the style attribute */
+  }
+  

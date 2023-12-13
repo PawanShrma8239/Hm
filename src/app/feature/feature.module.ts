@@ -4,6 +4,10 @@ import { FeatureComponent } from './feature.component';
 
 import { RouterModule } from '@angular/router';
 import { FeatureRoutingModule } from './feature-routing.module';
+import { FheaderComponent } from './fheader/fheader.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+
+
 import { GuestRegistrationComponent } from './guest-registration/guest-registration.component';
 import { ManageGuestComponent } from './manage-guest/manage-guest.component';
 import { AddARoomComponent } from './add-aroom/add-aroom.component';
@@ -27,6 +31,9 @@ import { ComplaintComponent } from './complaint/complaint.component';
 @NgModule({
   declarations: [
     FeatureComponent,
+    FheaderComponent,
+    SidebarComponent,
+
     GuestRegistrationComponent,
     ManageGuestComponent,
     AddARoomComponent,
