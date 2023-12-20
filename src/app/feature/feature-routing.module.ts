@@ -16,6 +16,8 @@ import { RegistrationComponent } from './registration/registration.component';
 import { TransactionsComponent } from './transactions/transactions.component';
 import { VisitHistoryComponent } from './visit-history/visit-history.component';
 import { VisitInformationComponent } from './visit-information/visit-information.component';
+import { ViewMenuComponent } from './view-menu/view-menu.component';
+import { ReservationComponent } from './reservation/reservation.component';
 
 
 
@@ -39,8 +41,8 @@ const routes: Routes = [
   {path:'transactions',component:TransactionsComponent},
   {path:'visit-history',component:VisitHistoryComponent},
   {path:'visit-information',component:VisitInformationComponent},
-  
-  
+  {path:'view-menu',component:ViewMenuComponent},
+  {path:'reservation',component:ReservationComponent},
   
  ]},
  

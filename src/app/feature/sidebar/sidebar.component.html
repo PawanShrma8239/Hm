@@ -5,7 +5,7 @@
       <ul class="nav nav-sidebar-menu sidebar-toggle-view">
         <!-- Dashboard -->
         <li class="nav-item" [ngClass]="{'active': activeMenuItem === 'dashboard'}">
-          <a href="admin-index.html" class="nav-link"><i class="flaticon-dashboard"></i><span>Dashboard</span></a>
+          <a href="admin-index.html" (click)="change(false)" class="nav-link"><i class="flaticon-dashboard"></i><span>Dashboard</span></a>
         </li>
   
         <!-- Registration -->
@@ -18,13 +18,17 @@
           <ul class="nav sub-group-menu" [ngClass]="{'menu-open': activeMenuItem === 'registration', 'hide': activeMenuItem !== 'registration'}">
             <li class="nav-item">
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a routerLink="/feature/guest-registration" class="nav-link"><i class="fas fa-angle-right"></i>Guest Registration</a>
 =======
   <a routerLink="/feature/guest-registration" class="nav-link"><i class="fas fa-angle-right"></i>Guest Registration</a>
 >>>>>>> origin/Anil
+=======
+               <a routerLink="/feature/guest-registration" (click)="change(false)" class="nav-link"><i class="fas fa-angle-right"></i>Guest Registration</a>
+>>>>>>> origin/Pawan
             </li>
             <li class="nav-item">
-              <a routerLink="/feature/mange-guest" class="nav-link"><i class="fas fa-angle-right"></i>Manage Guest</a>
+              <a routerLink="/feature/mange-guest" (click)="change(false)" class="nav-link"><i class="fas fa-angle-right"></i>Manage Guest</a>
             </li>
           </ul>
         </li>
@@ -38,10 +42,10 @@
           </a>
           <ul class="nav sub-group-menu" [ngClass]="{'menu-open': activeMenuItem === 'rooms', 'hide': activeMenuItem !== 'rooms'}">
             <li class="nav-item">
-              <a routerLink="/feature/add-a-room" class="nav-link"><i class="fas fa-angle-right"></i>Add a Room</a>
+              <a routerLink="/feature/add-a-room" (click)="change(false)" class="nav-link"><i class="fas fa-angle-right"></i>Add a Room</a>
             </li>
             <li class="nav-item">
-              <a routerLink="/feature/manage-rooms"class="nav-link"><i class="fas fa-angle-right"></i>Manage Rooms</a>
+              <a routerLink="/feature/manage-rooms" (click)="change(false)" class="nav-link"><i class="fas fa-angle-right"></i>Manage Rooms</a>
             </li>
           </ul>
         </li>
@@ -55,16 +59,16 @@
           </a>
           <ul class="nav sub-group-menu" [ngClass]="{'menu-open': activeMenuItem === 'cafeteria', 'hide': activeMenuItem !== 'cafeteria'}">
             <li class="nav-item">
-              <a routerLink="/feature/my-account" class="nav-link"><i class="fas fa-angle-right"></i>My Account</a>
+              <a routerLink="/feature/my-account" (click)="change(true)" class="nav-link"><i class="fas fa-angle-right"></i>My Account</a>
             </li>
             <li class="nav-item">
-              <a routerLink="/feature/address-book" class="nav-link"><i class="fas fa-angle-right"></i>Address Book</a>
+              <a routerLink="/feature/address-book" (click)="change(true)"  class="nav-link"><i class="fas fa-angle-right"></i>Address Book</a>
             </li>
             <li class="nav-item">
-              <a routerLink="/feature/recent-orders" class="nav-link"><i class="fas fa-angle-right"></i>Recent Orders</a>
+              <a routerLink="/feature/recent-orders" (click)="change(true)" class="nav-link"><i class="fas fa-angle-right"></i>Recent Orders</a>
             </li>
             <li class="nav-item">
-              <a routerLink="/feature/recent-reservations" class="nav-link"><i class="fas fa-angle-right"></i>Recent Reservations</a>
+              <a routerLink="/feature/recent-reservations" (click)="change(true)" class="nav-link"><i class="fas fa-angle-right"></i>Recent Reservations</a>
             </li>
           </ul>
         </li>
@@ -80,13 +84,13 @@
     </a>
     <ul class="nav sub-group-menu" [ngClass]="{'menu-open': activeMenuItem === 'securityAccess', 'hide': activeMenuItem !== 'securityAccess'}">
       <li class="nav-item">
-        <a routerLink="/feature/registration" class="nav-link"><i class="fas fa-angle-right"></i>Registration</a>
+        <a routerLink="/feature/registration" (click)="change(false)" class="nav-link"><i class="fas fa-angle-right"></i>Registration</a>
       </li>
       <li class="nav-item">
-        <a routerLink="/feature/visit-information" class="nav-link "><i class="fas fa-angle-right"></i>Visit Information</a>
+        <a routerLink="/feature/visit-information" (click)="change(false)" class="nav-link "><i class="fas fa-angle-right"></i>Visit Information</a>
       </li>
       <li class="nav-item">
-        <a routerLink="/feature/visit-history" class="nav-link"><i class="fas fa-angle-right"></i>Visit History</a>
+        <a routerLink="/feature/visit-history" (click)="change(false)" class="nav-link"><i class="fas fa-angle-right"></i>Visit History</a>
       </li>
     </ul>
   </li>
@@ -100,10 +104,10 @@
     </a>
     <ul class="nav sub-group-menu" [ngClass]="{'menu-open': activeMenuItem === 'payment', 'hide': activeMenuItem !== 'payment'}">
       <li class="nav-item">
-        <a routerLink="/feature/transactions" class="nav-link"><i class="fas fa-angle-right"></i>Transactions</a>
+        <a routerLink="/feature/transactions" (click)="change(false)"  class="nav-link"><i class="fas fa-angle-right"></i>Transactions</a>
       </li>
       <li class="nav-item">
-        <a routerLink="/feature/pay" class="nav-link"><i class="fas fa-angle-right"></i>Pay</a>
+        <a routerLink="/feature/pay" (click)="change(false)" class="nav-link"><i class="fas fa-angle-right"></i>Pay</a>
       </li>
     </ul>
   </li>
@@ -120,10 +124,10 @@
           </a>
           <ul class="nav sub-group-menu" [ngClass]="{'menu-open': activeMenuItem === 'complaint', 'hide': activeMenuItem !== 'complaint'}">
             <li class="nav-item">
-              <a routerLink="/feature/complaint" class="nav-link"><i class="fas fa-angle-right"></i>Complaint</a>
+              <a routerLink="/feature/complaint" (click)="change(false)" class="nav-link"><i class="fas fa-angle-right"></i>Complaint</a>
             </li>
             <li class="nav-item">
-              <a routerLink="/feature/report" class="nav-link"><i class="fas fa-angle-right"></i>Report</a>
+              <a routerLink="/feature/report" (click)="change(false)" class="nav-link"><i class="fas fa-angle-right"></i>Report</a>
             </li>
           </ul>
         </li>

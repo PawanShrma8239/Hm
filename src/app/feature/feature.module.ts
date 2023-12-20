@@ -22,6 +22,11 @@ import { ComplaintComponent } from './complaint/complaint.component';
 import { ReportComponent } from './report/report.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FfooterComponent } from './ffooter/ffooter.component';
+import { ViewMenuComponent } from './view-menu/view-menu.component';
+import { ReservationComponent } from './reservation/reservation.component';
+
+
+
 
 
 @NgModule({
@@ -46,8 +51,11 @@ import { FfooterComponent } from './ffooter/ffooter.component';
     ReportComponent,
     DashboardComponent,
     FfooterComponent,
+    ViewMenuComponent,
+    ReservationComponent,
    
   ],
+  providers: [],
   imports: [
     CommonModule,
     RouterModule,

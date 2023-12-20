@@ -37,6 +37,12 @@
             </li>
         </ul>
         <ul class="navbar-nav">
+            <li class="navbar-item dropdown header-message" *ngIf="hide">
+                <a routerLink="/feature/view-menu"><span class="text-white">View Menu</span></a>
+            </li>
+            <li class="navbar-item dropdown header-message" *ngIf="hide">
+                <a routerLink="/feature/reservation"><span class="text-white">Reservation</span></a>
+            </li>
             <li class="navbar-item dropdown header-admin" >
                 <a class="navbar-nav-link dropdown-toggle" role="button" (click)="togglePDropdown()" [attr.aria-expanded]="isPDropdownOpen.toString()">
                     <div class="admin-title">
@@ -59,7 +65,7 @@
                     </div>
                 </div>
             </li>
-            <li class="navbar-item dropdown header-message">
+            <li class="navbar-item dropdown header-message"  *ngIf="!hide">
                 <a class="navbar-nav-link dropdown-toggle"  role="button" (click)="toggleMDropdown()" [attr.aria-expanded]="isMDropdownOpen.toString()">
                     <i class="far fa-envelope"></i>
                     <div class="item-title d-md-none text-16 mg-l-10">Message</div>
@@ -134,7 +140,7 @@
                     </div>
                 </div>
             </li>
-            <li class="navbar-item dropdown header-notification">
+            <li class="navbar-item dropdown header-notification" *ngIf="!hide">
                 <a class="navbar-nav-link dropdown-toggle" role="button" (click)="toggleNDropdown()" [attr.aria-expanded]="isNDropdownOpen.toString()">
                     <i class="far fa-bell"></i>
                     <div class="item-title d-md-none text-16 mg-l-10">Notification</div>
