@@ -1,4 +1,6 @@
-import { Component  } from '@angular/core';
+import {  Component  } from '@angular/core';
+import { ComService } from '../com.service';
+
 
 @Component({
   selector: 'app-sidebar',
@@ -11,4 +13,12 @@ export class SidebarComponent {
   toggleSubMenu(menuItem: string): void {
     this.activeMenuItem = this.activeMenuItem === menuItem ? '' : menuItem;
   }
+  constructor(private comService: ComService) {}
+  change(value: boolean): void {
+    this.comService.updateShide(value);
+   
+   
+  }
+
+
 }
