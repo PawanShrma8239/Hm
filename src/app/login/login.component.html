@@ -8,10 +8,10 @@
     <form id="login-form">
 
         <div class="password-container">
-            <input type="text" id="login-username" placeholder="Username" required>
-            <input type="password" id="login-password" placeholder="Password" required>
+            <input type="text" id="login-username" placeholder="Username"  [(ngModel)]="username" required>
+            <input type="password" id="login-password" placeholder="Password" [(ngModel)]="password" required>
             <i class="fas fa-eye password-icon" id="password-toggle"></i>
-            <button id="login-button">Login</button>
+            <button (click)="login()" id="login-button">Login</button>
             <div>
                 <a href="Forgot-Password.html">Forgot Password</a>
             </div>
