@@ -56,7 +56,7 @@
               "src/assets/css/select2.min.css",
               "src/assets/css/style.css"
            ],
-           "scripts": [
+           "scripts": [  
             "src/assets/js/aos.web.js",
             "src/assets/js/ajaxchimp.min.web.js",
             "src/assets/js/appear.min.web.js",

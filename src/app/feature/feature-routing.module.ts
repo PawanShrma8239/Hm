@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FeatureComponent } from './feature.component';
-import { AddARoomComponent } from './add-aroom/add-aroom.component';
+import { AddARoomComponent } from './add-a-room/add-a-room.component';
 import { AddressBookComponent } from './address-book/address-book.component';
 import { ComplaintComponent } from './complaint/complaint.component';
 import { GuestRegistrationComponent } from './guest-registration/guest-registration.component';
@@ -9,6 +9,7 @@ import { ManageGuestComponent } from './manage-guest/manage-guest.component';
 import { ManageRoomsComponent } from './manage-rooms/manage-rooms.component';
 import { MyAccountComponent } from './my-account/my-account.component';
 import { PayComponent } from './pay/pay.component';
+import { ReportComponent } from './report/report.component';
 import { RecentOrdersComponent } from './recent-orders/recent-orders.component';
 import { RecentReservationsComponent } from './recent-reservations/recent-reservations.component';
 import { RegistrationComponent } from './registration/registration.component';
@@ -22,11 +23,11 @@ import { VisitInformationComponent } from './visit-information/visit-information
 const routes: Routes = [
 
  {path:'feature', component:FeatureComponent,children:[
-
   {path:'',redirectTo:'x' ,pathMatch: 'full'},
-  {path:'add-aroom',component:AddARoomComponent},
+  {path:'add-a-room',component:AddARoomComponent},
   {path:'address-book',component:AddressBookComponent},
   {path:'complaint',component:ComplaintComponent},
+  {path:'report',component:ReportComponent},
   {path:'guest-registration',component:GuestRegistrationComponent},
   {path:'mange-guest',component:ManageGuestComponent},
   {path:'manage-rooms',component:ManageRoomsComponent},
@@ -38,6 +39,7 @@ const routes: Routes = [
   {path:'transactions',component:TransactionsComponent},
   {path:'visit-history',component:VisitHistoryComponent},
   {path:'visit-information',component:VisitInformationComponent},
+  
   
   
  ]},
