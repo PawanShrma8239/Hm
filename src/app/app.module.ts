@@ -17,6 +17,8 @@ import { FormsModule } from '@angular/forms';
 //import { MyAccountComponent } from './my-account/my-account.component';
 
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 
 
@@ -53,7 +55,10 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     BrowserModule,
     AppRoutingModule,
     FeatureModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSidenavModule
+    
 
    
   

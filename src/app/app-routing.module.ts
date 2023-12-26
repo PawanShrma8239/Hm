@@ -15,8 +15,8 @@ const routes: Routes = [
  {path:'login', component:LoginComponent},
 {path:'feature', component:FeatureComponent},
 {path:'logout', component: LogoutComponent},
-{path : 'my-account', component: MyAccountComponent}
-
+{path : 'my-account', component: MyAccountComponent},
+{path:'admin-index.html', component:FeatureComponent}
 
 
 
