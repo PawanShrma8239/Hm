@@ -3,8 +3,8 @@ import { RouterModule, Routes, Router } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { LoginComponent } from './login/login.component';
 import { FeatureComponent } from './feature/feature.component';
-import { LogoutComponent } from './logout/logout.component';
-import { MyAccountComponent } from './feature/my-account/my-account.component';
+import { AddARoomComponent } from './feature/add-a-room/add-a-room.component';
+
 
 
 
@@ -14,9 +14,8 @@ const routes: Routes = [
 { path: 'main', component: MainComponent },
  {path:'login', component:LoginComponent},
 {path:'feature', component:FeatureComponent},
-{path:'logout', component: LogoutComponent},
-{path : 'my-account', component: MyAccountComponent},
-{path:'admin-index.html', component:FeatureComponent}
+{path:'admin-index.html', component:FeatureComponent},
+{path:'edit-room-details.html', component:AddARoomComponent}
 
 
 

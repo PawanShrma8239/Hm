@@ -30,6 +30,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,9 +43,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MainComponent,
     LoginComponent,
     ContactComponent,
-     LogoutComponent,
-     ForgotPasswordComponent,
+    ForgotPasswordComponent,
+    
 
+    
    
    
    

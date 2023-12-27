@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 export class FheaderComponent {
 isWrapper=true;
 isBgAsh=true;
-
+hide:boolean=false;
 
   constructor(private router: Router){}
 

@@ -41,9 +41,14 @@
             </li>
         </ul>
         <ul class="navbar-nav">
-            <li class="navbar-item dropdown header-admin">
-                <a class="navbar-nav-link dropdown-toggle" role="button" (click)="togglePDropdown()"
-                    [attr.aria-expanded]="isPDropdownOpen.toString()">
+            <li class="navbar-item dropdown header-message" *ngIf="hide">
+                <a routerLink="/feature/view-menu"><span class="text-white">View Menu</span></a>
+            </li>
+            <li class="navbar-item dropdown header-message" *ngIf="hide">
+                <a routerLink="/feature/reservation"><span class="text-white">Reservation</span></a>
+            </li>
+            <li class="navbar-item dropdown header-admin" >
+                <a class="navbar-nav-link dropdown-toggle" role="button" (click)="togglePDropdown()" [attr.aria-expanded]="isPDropdownOpen.toString()">
                     <div class="admin-title">
                         <h5 class="item-title">Vikram</h5>
                         <span>Admin</span>

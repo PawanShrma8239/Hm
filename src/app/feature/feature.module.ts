@@ -1,13 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FeatureComponent } from './feature.component';
-
 import { RouterModule } from '@angular/router';
 import { FeatureRoutingModule } from './feature-routing.module';
 import { FheaderComponent } from './fheader/fheader.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-
-
 import { GuestRegistrationComponent } from './guest-registration/guest-registration.component';
 import { ManageGuestComponent } from './manage-guest/manage-guest.component';
 import { AddARoomComponent } from './add-a-room/add-a-room.component';
@@ -25,6 +22,9 @@ import { ComplaintComponent } from './complaint/complaint.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FfooterComponent } from './ffooter/ffooter.component';
+import { ViewMenuComponent } from './view-menu/view-menu.component';
+import { ReservationComponent } from './reservation/reservation.component';
+import { EditRoomDetailsComponent } from './edit-room-details/edit-room-details.component';
 
 
 
@@ -35,7 +35,6 @@ import { FfooterComponent } from './ffooter/ffooter.component';
     FeatureComponent,
     FheaderComponent,
     SidebarComponent,
-
     GuestRegistrationComponent,
     ManageGuestComponent,
     AddARoomComponent,
@@ -53,6 +52,9 @@ import { FfooterComponent } from './ffooter/ffooter.component';
     
     DashboardComponent,
     FfooterComponent,
+    ViewMenuComponent,
+    ReservationComponent,
+    EditRoomDetailsComponent,
    
   ],
   providers: [],
