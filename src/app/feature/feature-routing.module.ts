@@ -18,7 +18,7 @@ import { VisitHistoryComponent } from './visit-history/visit-history.component';
 import { VisitInformationComponent } from './visit-information/visit-information.component';
 import { ViewMenuComponent } from './view-menu/view-menu.component';
 import { ReservationComponent } from './reservation/reservation.component';
-
+import { EditRoomDetailsComponent } from './edit-room-details/edit-room-details.component';
 
 
 
@@ -43,7 +43,7 @@ const routes: Routes = [
   {path:'visit-information',component:VisitInformationComponent},
   {path:'view-menu',component:ViewMenuComponent},
   {path:'reservation',component:ReservationComponent},
-  
+  {path:'editroomdetails',component:EditRoomDetailsComponent},
  ]},
  
  ];

@@ -24,6 +24,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FfooterComponent } from './ffooter/ffooter.component';
 import { ViewMenuComponent } from './view-menu/view-menu.component';
 import { ReservationComponent } from './reservation/reservation.component';
+import { EditRoomDetailsComponent } from './edit-room-details/edit-room-details.component';
 
 
 
@@ -53,6 +54,7 @@ import { ReservationComponent } from './reservation/reservation.component';
     FfooterComponent,
     ViewMenuComponent,
     ReservationComponent,
+    EditRoomDetailsComponent,
    
   ],
   providers: [],
