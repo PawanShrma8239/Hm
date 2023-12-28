@@ -25,7 +25,7 @@ import { FfooterComponent } from './ffooter/ffooter.component';
 import { ViewMenuComponent } from './view-menu/view-menu.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { EditRoomDetailsComponent } from './edit-room-details/edit-room-details.component';
-
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -61,7 +61,8 @@ import { EditRoomDetailsComponent } from './edit-room-details/edit-room-details.
   imports: [
     CommonModule,
     RouterModule,
-    FeatureRoutingModule
+    FeatureRoutingModule,
+    FormsModule
   ]
 })
 export class FeatureModule { }

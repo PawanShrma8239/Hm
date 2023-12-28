@@ -22,11 +22,13 @@
                 <div class="row gutters-8 d-flex justify-content-between">
                     <div class="col-3-xxxl col-xl-3 col-lg-3 col-12 form-group">
                         <label>Show </label>
-                        <select class="select2">
-                            <option value="1">10 </option>
-                            <option value="2">20 </option>
-                            <option value="3">30 </option>
-                            <option value="3">40 </option>
+                        <select class="select2" (change)="updateEntriesToShow($event)">
+
+
+                            <option >10 </option>
+                            <option >20 </option>
+                            <option >30 </option>
+                            <option >40 </option>
                         </select>
                         <label> entries</label>
                     </div>
@@ -37,6 +39,8 @@
                 </div>
             </form>
             <div class="table-responsive">
+              <p>Selected Entries: {{ entriesToShow }}</p>
+    <p>Rendered Entries: {{ roomData.slice(0, entriesToShow).length }}</p>
                 <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper no-footer"><!-- your-component.component.html -->
                     <table class="table display data-table text-nowrap dataTable no-footer" id="DataTables_Table_0" role="grid">
                       <thead>
@@ -50,12 +54,14 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr *ngFor="let room of roomData">
-                          <td>{{ room.serialNumber }}</td>
-                          <td>{{ room.seater }}</td>
-                          <td>{{ room.roomNumber }}</td>
-                          <td>{{ room.feePerMonth }}</td>
-                          <td>{{ room.postingDate }}</td>
+
+                        <tr *ngFor="let room of displayedData">
+
+                          <td>{{ room?.serialNumber }}</td>
+                          <td>{{ room?.seater }}</td>
+                          <td>{{ room?.roomNumber }}</td>
+                          <td>{{ room?.feePerMonth }}</td>
+                          <td>{{ room?.postingDate }}</td>
                           <td>
                             <div class="dropdown" [ngClass]="{ 'show': room.isDropdownOpen }">
                               <a class="dropdown-toggle" (click)="toggleDropdown(room)" aria-expanded="false">
@@ -69,9 +75,21 @@
                             </div>
                           </td>
                         </tr>
+
                       </tbody>
                     </table>
-                    <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate"><a class="paginate_button previous disabled" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" id="DataTables_Table_0_previous">Previous</a><span><a class="paginate_button current" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0">1</a></span><a class="paginate_button next disabled" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0" id="DataTables_Table_0_next">Next</a></div></div>
+                    <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
+                        <button type="button" (click)="previousPage()" [disabled]="currentPage ===1" class="paginate_button previous disabled" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" id="DataTables_Table_0_previous">Previous</button>
+                        <span><a class="paginate_button current" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0">1</a>
+                        </span>
+                        <span><a class="paginate_button current" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0">2</a>
+                        </span>
+                        <span><a class="paginate_button current" aria-controls="DataTables_Table_0" data-dt-idx="3" tabindex="0">3</a>
+                        </span>
+                        <span><a class="paginate_button current" aria-controls="DataTables_Table_0" data-dt-idx="4" tabindex="0">4</a>
+                        </span>
+                        <button type="button" (click)="nextPage()" [disabled]="currentPage * entriesToShow >= roomData.length" class="paginate_button next disabled" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0" id="DataTables_Table_0_next">Next
+                      </button></div>
             </div>
         </div>
     </div>
