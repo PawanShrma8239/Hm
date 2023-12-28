@@ -6,6 +6,7 @@ interface RoomData {
   feePerMonth: number;
   postingDate: string;
   isDropdownOpen: boolean;
+  [key: string]: number | string | boolean;
 }
 @Component({
   selector: 'app-manage-rooms',
@@ -16,7 +17,57 @@ export class ManageRoomsComponent {
   entriesToShow: number = 10;
   currentPage: number = 1;
   displayedData: RoomData[] = [];
+  pages: number[] =[];
+  filteredRoomData: RoomData[]=[];
+
+  filterValue : string = '';
+  sortColumn: string = '';
+  sortDirection: string = 'asc';
+
+constructor(){
+//initialize data
+
+  this.filteredRoomData = [...this.roomData];
+}
+
+
+applyFilter() {
+  console.log('filteredRoomData after filtering', this.filteredRoomData);
+  this.filteredRoomData = this.roomData.filter(room =>
+    room.seater.toLowerCase().includes(this.filterValue.toLowerCase()) ||
+    room.roomNumber.toLowerCase().includes(this.filterValue.toLowerCase()) ||
+    room.feePerMonth.toString().includes(this.filterValue.toLowerCase()) ||
+    room.postingDate.includes(this.filterValue.toLowerCase())
+  );
+}
+
+sort(column: string) {
+  console.log('filtredRoomData after sorting:', this.filteredRoomData);
+  if (this.sortColumn === column) {
+    this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
+  } else {
+    this.sortColumn = column;
+    this.sortDirection = 'asc';
+  }
+  this.filteredRoomData.sort((a, b) => {
+    const valueA = a[column];
+    const valueB = b[column];
+    if (valueA < valueB) {
+      return this.sortDirection === 'asc' ? -1 : 1;
+    } else if (valueA > valueB) {
+      return this.sortDirection === 'asc' ? 1 : -1;
+    } else {
+      return 0;
+    }
+  });
+}
+
+updateData(){
+  this.filteredRoomData = [...this.roomData];
+
+}
   roomData: RoomData[] = [
+
 
     {
       serialNumber: 1,
@@ -340,9 +391,11 @@ export class ManageRoomsComponent {
       isDropdownOpen: false
     },
 
-    // ... your existing data ...
+    
   ];
-  ngOnInit() {
+  pagesToShow: (number | 'eclipse')[] =[];
+
+    ngOnInit() {
     this.updateDisplayedData();
   }
   toggleDropdown(room: RoomData) {
@@ -356,10 +409,33 @@ export class ManageRoomsComponent {
     this.currentPage = 1; // Reset to the first page when changing entries to show
     this.updateDisplayedData();
   }
+  calculatePages(){
+
+    const totalEntries = this.roomData.length;
+    const totalPgaes= Math.ceil(totalEntries / this.entriesToShow);
+    this.pages = Array.from({ length: totalPgaes}, (_, index) => index +1);
+  }
+
+    gotoPages(page: number){
+      this.currentPage = page;
+      this.updateDisplayedData();
+    }
   updateDisplayedData() {
     const startIndex = (this.currentPage - 1) * this.entriesToShow;
     const endIndex = startIndex + this.entriesToShow;
     this.displayedData = this.roomData.slice(startIndex, endIndex);
+  }
+  onPageSizeChange(){
+    this.currentPage = 1;
+    this.calculatePages();
+    this.updateDisplayedData();
+  }
+  
+  getEntriesRange(): string{
+    const startIndex = (this.currentPage - 1) * this.entriesToShow + 1;
+    const endIndex = Math.min(this.currentPage * this.entriesToShow, this.roomData.length);
+    return `${startIndex}-${endIndex} of ${this.roomData.length}`;
+  
   }
   nextPage() {
     const totalEntries = this.roomData.length;
@@ -372,6 +448,7 @@ export class ManageRoomsComponent {
       this.currentPage++;
       this.updateDisplayedData();
     }
+
   }
   previousPage() {
     console.log('currentPage:', this.currentPage);
