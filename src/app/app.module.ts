@@ -11,7 +11,15 @@ import { MainComponent } from './main/main.component';
 import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
 import { FeatureModule } from './feature/feature.module';
+
+import { LogoutComponent } from './logout/logout.component';
+import { FormsModule } from '@angular/forms';
+//import { MyAccountComponent } from './my-account/my-account.component';
+
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSidenavModule } from '@angular/material/sidenav';
+
 
 
 
@@ -49,7 +57,11 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FeatureModule
+    FeatureModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSidenavModule
+    
 
    
   

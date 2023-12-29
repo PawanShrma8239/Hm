@@ -1,33 +1,30 @@
-import { Component, OnInit } from '@angular/core';
-import { ComService } from '../com.service';
-
-
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-fheader',
   templateUrl: './fheader.component.html',
   styleUrls: ['./fheader.component.css']
 })
-export class FheaderComponent implements OnInit {
+export class FheaderComponent {
+isWrapper=true;
+isBgAsh=true;
+hide:boolean=false;
+
+  constructor(private router: Router){}
+
+navigateToAdminIndex() {
+this.router.navigate(['admin-index.html']);
+
+}
   isPDropdownOpen = false;
   isMDropdownOpen = false;
   isNDropdownOpen = false;
   isLDropdownOpen = false;
-  hide: boolean = false;
-
-  constructor(private comService: ComService) { }
-
-  ngOnInit(): void {
-    this.comService.shide$.subscribe(value => {
-      this.hide = value;
-      console.log("header " + this.hide);
-    });
-  }
-
- 
 
   togglePDropdown() {
     this.closeAllMenusExcept('admin');
     this.isPDropdownOpen = !this.isPDropdownOpen;
+
   }
   toggleMDropdown() {
     this.closeAllMenusExcept('message');

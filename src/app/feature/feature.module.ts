@@ -19,13 +19,13 @@ import { VisitHistoryComponent } from './visit-history/visit-history.component';
 import { TransactionsComponent } from './transactions/transactions.component';
 import { PayComponent } from './pay/pay.component';
 import { ComplaintComponent } from './complaint/complaint.component';
-import { ReportComponent } from './report/report.component';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FfooterComponent } from './ffooter/ffooter.component';
 import { ViewMenuComponent } from './view-menu/view-menu.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { EditRoomDetailsComponent } from './edit-room-details/edit-room-details.component';
-
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -49,7 +49,7 @@ import { EditRoomDetailsComponent } from './edit-room-details/edit-room-details.
     TransactionsComponent,
     PayComponent,
     ComplaintComponent,
-    ReportComponent,
+    
     DashboardComponent,
     FfooterComponent,
     ViewMenuComponent,
@@ -61,7 +61,8 @@ import { EditRoomDetailsComponent } from './edit-room-details/edit-room-details.
   imports: [
     CommonModule,
     RouterModule,
-    FeatureRoutingModule
+    FeatureRoutingModule,
+    FormsModule
   ]
 })
 export class FeatureModule { }
