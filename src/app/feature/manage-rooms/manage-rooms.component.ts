@@ -31,6 +31,14 @@ export class ManageRoomsComponent {
       postingDate: '2023-02-01',
       isDropdownOpen: false
     },
+    {
+      serialNumber: 3,
+      seater: 'Single',
+      roomNumber: '101',
+      feePerMonth: 500,
+      postingDate: '2023-01-01',
+      isDropdownOpen: false
+    },
     // Add more room data as needed...
   ];
 
